@@ -1,8 +1,7 @@
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './Navbar/Home'
-import About from './Navbar/About'
-import Contact from './Navbar/Contact'
+import Paste from './Navbar/Paste'
 import Nav from './Navbar/Nav'
 import NotFound from './Navbar/NotFound'
 
@@ -17,19 +16,11 @@ const router = createBrowserRouter(
       </div>
     },
     {
-      path:'/About',
+      path:'/Paste',
       element:
       <div>
         <Nav />
-        <About />
-      </div>
-    },
-    {
-      path:'/Contact',
-      element:
-      <div>
-        <Nav />
-        <Contact />
+        <Paste />
       </div>
     },
     {
@@ -44,7 +35,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-   <div className="w-screen h-screen bg-white text-red-500">
+   <div className="bg-white text-black">
     <RouterProvider router={router}/>
    </div>
   )
